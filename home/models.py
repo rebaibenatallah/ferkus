@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib import admin
 
 # Create your models here.
-class tarjama(models.Model):
+class Tarjama(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
-    date = models.DateField()
+    # date = models.DateField(null=True)
 
-admin.site.register(tarjama)
+admin.site.register(Tarjama)
