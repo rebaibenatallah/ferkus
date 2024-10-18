@@ -1,3 +1,4 @@
+
 # Ferkus
 
 #### Create Home App
@@ -9,10 +10,17 @@
 > path('home/',include("home.urls")),
 #### 3 - urls home
 >from django.urls import path
+>
 >from . import views
 >
 >urlpatterns = [
+>
 >    path('',views.index,name='index'),
+>
 >]
+### 4 - create templates folder and add in settings.py>templates
+>
+>'DIRS': [os.path.join(BASE_DIR,'templates')],
+>
 ### This Step
 #### now we are creating models for tarjama this model contains text (markdown) 
