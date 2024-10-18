@@ -1,6 +1,6 @@
 # ferkus
 
-####create home app
+#### create home app
 >
 >python manage.py startapp home
 >
