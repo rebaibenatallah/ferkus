@@ -1,4 +1,4 @@
 # ferkus
 
 ### this step
-#### now we are creatin models for tarjama this model content text (markdown) 
+#### now we are creating models for tarjama this model contains text (markdown) 
