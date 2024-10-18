@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =========== REMIXICONS =========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!-- =========== REMIXICONS =========== -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Ferkus</title>
+</head>
+<body>
+    
+    {% block navbar %}
+    {% include  'items/navbar.html' %}
+    {% endblock %}
+    
+    <main class="main container" id="main">
+        <div class="main-content">
+            <div class="blocks">
+                <div class="block1 block-head">
+                    <div class="th">
+                        <!-- <a href="#">سجل الزوار</a> -->
+                         <input type="checkbox" class="list-link" id="list-link" >
+                         <div class="th">
+                            <label for="list-link">سجل الزوار</label>
+                         </div>
+                         <ul class="list-links">
+                            <li><a href="iqtirahete.html">اقتراحات</a></li>
+                            <li><a href="intiqadete.html">انتقادات</a></li>
+                            <li><a href="tahani.html">تهانٍ</a></li>
+                         </ul>
+                    </div>
+                    <div class="line"></div>
+                    <div class="th"><a href="contact.html">بريد الموقع</a></div>
+                    <div class="line"></div>
+                    <div class="th"><a href="{% url 'objectifs' %}">أهداف الموقع</a></div>
+                    <div class="line"></div>
+                    <div class="th"><a href="{% url 'tarjama' %}">تعريف بالشيخ</a></div>
+                </div>
+<!-- ====================== block ===================== -->
+                {% block content %}
+                {% endblock %}        
+<!-- ==================================================== -->
+            </div>
+            <div class="main-side">
+                <div class="block2">
+                    <div class="block-header">
+                        <h3>بحث في الموقع</h3>
+                    </div>
+                    <div class="block-content">
+                        <ul class="menu">
+                            <li class="leaf first">بحث في مكتبة الفتاوى</li>
+                            <li class="leaf">بحث في المكتبة الصوتية</li>
+                            <li class="leaf last">في جميع محتوى الموقع</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="block2">
+                    <div class="block-header">
+                        <h3>فوائد ونوادر</h3>
+                    </div>
+                    <div class="block-content">
+                        <div>
+                            <a  href="#">منهج الإمام مالك –رحمه الله-</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block2">
+                    <div class="block-header">
+                        <h3>إحصائيات</h3>
+                    </div>
+                    <div class="block-content">
+                        <ul class="menu">
+                            <li class="leaf first">بحث في مكتبة الفتاوى</li>
+                            <li class="leaf">بحث في المكتبة الصوتية</li>
+                            <li class="leaf last">في جميع محتوى الموقع</li>
+                        </ul>
+                    </div>
+                    <div class="block-footer">
+                        <h4>عدد الزوار : 226 زائرا من 21 دولة</h4>
+                    </div>
+                </div>
+
+                <div class="block2">
+                    <div class="block-header">
+                        <h3>ما في كتب الشيخ من الأعلام</h3>
+                    </div>
+                    <div class="block-content">
+                        <div >
+                            <a href="#">أبو الفتح الحُلواني</a>
+                        </div>
+                    </div>
+                    <div class="block-more">
+                        <a href="#">
+                            <p> .. للمزيد</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="block2">
+                    <div class="block-header">
+                        <h3>الفتاوى الأكثر قراءة</h3>
+                    </div>
+                    <div class="block-content">
+                        <ul class="menu">
+                            <li class="leaf first"><a href="#">في حكم الحجامة في الأيَّام المنهيِّ عنها إذا صادفت أفضلَ الأيَّام (1153682)</a></li>
+                            <li class="leaf"><a href="#">تعريفٌ موجز بالإباضية ومعتقداتهم (469807)</a></li>
+                            <li class="leaf"><a href="#">في معنى «الباءة» في حديث ابن مسعود رضي الله عنه (462964)</a></li>
+                            <li class="leaf"><a href="#">في حكم الصائمة التي أخَّرَتِ الاغتسالَ مِنْ حَيْضها إلى وقت المغرب (451435)</a></li>
+                            <li class="leaf last"><a href="#">في حكم الاشتراك في الأضحية (398925)</a></li>
+                        </ul>
+                    </div>
+                    <div class="block-more">
+                        <a href="#">
+                            <p> .. للمزيد</p>
+                        </a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <div class="content">
+                    <p><span>.: كل منشور لم يرد ذكره في الموقع الرسمي لا يعتمد عليه ولا ينسب إلى الشيخ :.</span></p>
+                    <p><span>.: منشورات الموقع في غير المناسبات الشرعية لا يلزم مسايرتها لحوادث الأمة المستجدة، </span></p>
+                    <p><span>أو النوازل الحادثة لأنها ليست منشورات إخبارية، إعلامية، بل هي منشورات ذات مواضيع فقهية، علمية، شرعية :.</span></p>
+                    <p><span>.: تمنع إدارة الموقع من استغلال مواده لأغراض تجارية، وترخص في الاستفادة من محتوى الموقع لأغراض بحثية أو دعوية على أن تكون الإشارة عند الاقتباس إلى الموقع :.</span></p>
+                    <p><span>جميع الحقوق محفوظة (1424 هـ/2004م - 1445هـ/2024م)</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- =============MAIN JS ============== -->
+     <script src="js/main.js"></script>  
+    
+
+</body>

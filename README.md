@@ -37,6 +37,7 @@ install markdown
 > python -m pip install markdown  
 then import in views
 >import markdown
+>
 and used in request
 >def home(request):
 >    md =markdown.Markdown(extensions=["fenced_code"])
@@ -44,5 +45,30 @@ and used in request
 >    select.text = md.convert(select.text)
 >    context = {"select":select}
 >    return render(request,'index.html',context=context)
+>
+### 6 static 
+the first step add static in setting
+>STATIC_ROOT = os.path.join(BASE_DIR,'static')
+>STATIC_URL = 'static/'
+>STATICFILES_DIRS = [
+>    os.path.join(BASE_DIR,'ferkus/static'),
+>    os.path.join(BASE_DIR,'home/static'),
+>]
+>
+then creat static folder in project folder
+>
+at the last use in your templets
+> {% load static %}
+> static 'link file'
+>
+### 7 - midea
+the first step add midea in setting 
+>MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+>MEDIA_URL = '/media/'
+>
+then add this line in urls project
+>] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>
+
 ### This Step
 #### now we are creating models for tarjama this model contains text (markdown) 
