@@ -17,5 +17,9 @@
 >    path('',views.index,name='index'),
 >
 >]
+### 4 - create templates folder and add in settings.py>templates
+>
+>'DIRS': [os.path.join(BASE_DIR,'templates')],
+>
 ### This Step
 #### now we are creating models for tarjama this model contains text (markdown) 
