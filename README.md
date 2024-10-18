@@ -9,10 +9,13 @@
 > path('home/',include("home.urls")),
 #### 3 - urls home
 >from django.urls import path
+>
 >from . import views
 >
 >urlpatterns = [
+>
 >    path('',views.index,name='index'),
+>
 >]
 ### This Step
 #### now we are creating models for tarjama this model contains text (markdown) 
