@@ -69,6 +69,17 @@ the first step add midea in setting
 then add this line in urls project
 >] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 >
-
+### 8 - get data from mode
+in view page 
+>
+>obj = Tarjama.objects.all()
+>return render(request,'user/tarjama_update.html',{'obj':obj})
+>
+show this data in templet
+>
+>{% for x in obj %}
+><li><a href="{% url 'tarjama_update2' x.id  %}">{{x.id}}</a></li>
+>{% endfor%}
+>
 ### This Step
 #### now we are creating models for tarjama this model contains text (markdown) 
