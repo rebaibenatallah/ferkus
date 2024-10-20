@@ -32,7 +32,7 @@
     display:block ;
     text-align: center;
     margin-top: 11rem;
-    width: 50%;
+    width: 90%;
     /* background: red; */
     margin: auto;
  }
@@ -48,6 +48,17 @@
  .form textarea{
     height: 10rem;
  }
+ .block {
+	background: rgb(244, 244, 244);
+	width: 80%;
+	display: flex;
+	padding: 1rem;
+	margin: auto;
+	border-radius: 5px;
+	margin-top: 1rem;
+
+ }
+ 
 
 </style> 
 </head> 
@@ -55,10 +66,10 @@
 <div id="navbar"> 
   <ul> 
 	<li><a href="{% url 'tarjama_form' %}">tarjama</a></li> 
-	<li><a href="">Link 2</a></li> 
-	<li><a href="">Link 3</a></li> 
+	<li><a href="{% url 'tarjama_update' %}">tarjama update</a></li> 
+	<li><a href="{% url 'contact_user' %}">contact</a></li> 
 	<li><a href="">Link 4</a></li> 
-	<li><a href="">Link 5</a></li> 
+	<li><a href="{% url 'index' %}">project</a></li> 
   </ul> 
 </div> 
 {% block content %}

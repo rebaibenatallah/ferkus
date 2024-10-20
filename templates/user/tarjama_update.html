@@ -1,0 +1,28 @@
+{% extends 'user/index.html' %}
+
+
+
+{% block content %}
+<ul>
+
+    {% for x in obj %}
+    
+    <li><a href="{% url 'tarjama_update2' x.id  %}">{{x.id}}</a></li>
+    
+    <!-- {{ x.title }}    -->
+    
+    {% endfor%}
+    <!-- {{objselected.title}} -->
+</ul>
+<div class="form">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{objselected.title}}" >
+        <br>
+        <textarea name="text" id="" name="text">{{objselected.text}}</textarea>
+        <button>insert</button>
+    </form>
+</div>
+
+
+{% endblock %}

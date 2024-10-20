@@ -46,12 +46,12 @@
                 <h3 class="sidebar__title">MANAGE</h3>
 
                 <div class="sidebar__list">
-                    <a href="{% url 'index' %}" class="sidebar__link active-link">
+                    <a href="{% url 'index' %}" class="sidebar__link {% if request.resolver_match.url_name == 'index' %} active-link {% endif %}">
                         <i class="ri-home-3-line"></i>
                         <span>الصفحة الرئيسية</span>
-                    </a>
+                    </a>    
 
-                    <a href="#" class="sidebar__link">
+                    <a href="{% url 'articles_mois' %}" class="sidebar__link {% if request.resolver_match.url_name == 'articles_mois' %} active-link {% endif %}">
                         <i class="ri-mic-2-line"></i>
                         <span>الكلمات الشهرية</span>
                     </a>

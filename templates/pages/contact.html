@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<!-- {{select.title}} -->
+<div class="block1">
+    <article class="article">
+        <h1 class="text-head">بريد الموقع</h1>
+        <p class="text-small">بإمكانك أن تترك رسالة مستخدما استمارة الاتصال أدناه.</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="name">اسمك:</label>
+            <input type="text" id="name" name="name" placeholder="اسمك">
+
+            <label for="mail">عنوان بريدك الإلكتروني:</label>
+            <input type="text" id="mali" name="mail" placeholder="البريد الإلكتروني">
+
+            <label for="pays">البلد:</label>
+            <input type="text" id="pays" name="pays" placeholder="البلد">
+
+            <label for="subject">الموضوع:</label>
+            <input type="text" id="subject" name="subject" placeholder="الموضوع">
+
+            <label for="message">الرسالة:</label>
+            <textarea type="text" maxlength="255" id="message" name="message" placeholder="الرسالة.."></textarea>
+
+            <label for="required">الصنف:</label>
+            <select id="required" name="required">
+                <option value="1">اقتراح</option>
+                <option value="2">انتقاد</option>
+                <option value="3">تهنئة</option>
+            </select>
+
+            <input type="submit" value="أرسل البريد الإلكتروني">
+        </form>
+    </article>
+</div>
+{% endblock %}

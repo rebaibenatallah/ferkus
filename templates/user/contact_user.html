@@ -1,0 +1,17 @@
+{% extends 'user/index.html' %}
+
+{% block content %}
+
+
+{% for contact in contacts  %}
+<div class="block">
+    <!-- {{contact.id}} -->
+    name : {{contact.name}} <br>
+    mail : {{contact.mail}} <br>
+    pays : {{contact.pays}} <br>
+    message :{{contact.message}} <br>
+    required :{{contact.required}} <br>
+    {{contact.date}}
+</div>
+{% endfor %}
+{% endblock %}

@@ -34,7 +34,7 @@
                          </ul>
                     </div>
                     <div class="line"></div>
-                    <div class="th"><a href="contact.html">بريد الموقع</a></div>
+                    <div class="th"><a href="{% url 'contact' %}">بريد الموقع</a></div>
                     <div class="line"></div>
                     <div class="th"><a href="{% url 'objectifs' %}">أهداف الموقع</a></div>
                     <div class="line"></div>
@@ -137,7 +137,13 @@
     </main>
 
     <!-- =============MAIN JS ============== -->
-     <script src="js/main.js"></script>  
+    <script>
+        var logo_n1 = "{% static 'img/n1.png' %}"; 
+        var logo_n2 = "{% static 'img/n2.png' %}"; 
+        var logo_1 = "{% static 'img/1.png' %}"; 
+        var logo_2 = "{% static 'img/2.png' %}"; 
+    </script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>  
     
 
 </body>

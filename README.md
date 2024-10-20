@@ -81,5 +81,6 @@ show this data in templet
 ><li><a href="{% url 'tarjama_update2' x.id  %}">{{x.id}}</a></li>
 >{% endfor%}
 >
+
 ### This Step
 #### now we are creating models for tarjama this model contains text (markdown) 
