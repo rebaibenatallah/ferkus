@@ -3,6 +3,38 @@
 
 {% block content %}
 
-<h1>article mois</h1>
+<div class="block1">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input class="search" type="text" placeholder="Search.." name="search">
+        <button class="search_btn" type="submit"><i class="ri-search-2-line"></i></button>
+    </form>
+</div>
+
+{% for obj in objs %}
+
+<div class="block1">
+    <!-- <img src="{{obj.image.url}}" alt=""> -->
+     <div class="articles_mois">
+
+         <br>
+         <h4 class="a_m_h4">
+             {{obj.id}}
+            </h4>
+            <div class="line"></div>
+            <h4 class="a_m_h4">
+                <a href="{% url 'articles_mois2' obj.id %}">
+                    {{obj.title}}
+                </a>
+            </h4>
+            <div class="line"></div>
+            <h4 class="a_m_h4_date">
+                {{obj.data_h}}
+            </h4>
+            
+    </div>
+</div>
+
+{% endfor %}
 
 {% endblock %}

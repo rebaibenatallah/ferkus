@@ -1,0 +1,47 @@
+{% extends 'user/index.html' %}
+
+{% block content %}
+<h1>update article mois</h1>
+<ul>
+    {% for obj in objs %}
+    <li><a href="{% url 'aeticle_mois_update_user' obj.id %}">
+        {{obj.title}}
+    </a></li>
+    {% endfor %}
+</ul>
+
+<div class="content">
+<div class="form">
+    <form action="" method="POST">
+        {% csrf_token %}
+         <input type="text" name="title" value="{{obj.title}}" >
+        <br>
+        <textarea name="text" id="" name="text">{{obj.text}}</textarea>
+    
+        <button>insert</button> 
+
+    </form>
+</div>
+
+<div class="cards">
+
+    {% for img in imgs %}
+    <div class="card">
+        <img src="{{img.image.url}}" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>{{img.name}}</b></h4> 
+            <h2>{{img.link}}</h2> 
+        </div>
+    </div>    
+    {% endfor %}
+</div>
+</div>
+
+<p>
+    <div id="link1"><a href="#section1" id="link1" >2</a></div>
+     <div id="section1">
+        <a href="#link1">1</a>
+    
+  </div>
+</p>
+{% endblock %}

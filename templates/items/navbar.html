@@ -51,7 +51,7 @@
                         <span>الصفحة الرئيسية</span>
                     </a>    
 
-                    <a href="{% url 'articles_mois' %}" class="sidebar__link {% if request.resolver_match.url_name == 'articles_mois' %} active-link {% endif %}">
+                    <a href="{% url 'articles_mois' %}" class="sidebar__link {% if request.resolver_match.url_name == 'articles_mois' or request.resolver_match.url_name == 'articles_mois2' %} active-link {% endif %}">
                         <i class="ri-mic-2-line"></i>
                         <span>الكلمات الشهرية</span>
                     </a>

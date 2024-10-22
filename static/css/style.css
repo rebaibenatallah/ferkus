@@ -49,6 +49,7 @@
     background-color: var(--body-color);
     color: var(--text-color);
     transition: background-color .4s;
+    
   }
 
   a{
@@ -353,6 +354,7 @@
   box-shadow: 2px 0 24px var(--shadow-color);
   border-radius: 1rem;
   direction: rtl;
+  position: relative;
 }
 
 .block1 h1 {
@@ -397,6 +399,57 @@
 .block1 .panel {
   margin-top: 1rem;
   direction: rtl;
+}
+
+.block1 .search {
+  background: var(--body-color);
+  color: var(--title-color);
+  display: block;
+  width: 100%;
+  height: 2rem;
+  z-index: 1;
+  margin-bottom: 0.3rem;
+  padding: 1.25rem;
+  border: 1px solid  var(--text-color);
+  border-radius: 1rem;
+}
+
+.block1 .search_btn {
+  color: var(--text-color);
+  position: absolute;
+  display: block;
+  top: 0;
+  margin-top: 1.5rem ;
+  z-index: 10;
+  left: 0;
+  font-size: 18px;
+  margin-left: 1.5rem;
+  /* margin-right: 95%; */
+}
+
+.block1 img {
+  margin: auto;
+  text-align: center;
+}
+
+.articles_mois {
+  display:flex ;
+  justify-content: space-evenly;
+  padding: 0 2rem;
+  /* background: red; */
+  
+}
+
+.block1 *{
+  margin-left: auto;
+  /* display: inline; */
+  /* text-align: right; */
+}
+
+.block1 .line {
+  border-left: 1px solid var(--text-color);
+  height: 1.5rem;
+  /* background: red; */
 }
 
 .blocks .block-head {

@@ -1,0 +1,16 @@
+{% extends 'user/index.html' %}
+
+{% block content %}
+<h1>images form</h1>
+
+<div class="form">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name"  >
+        <br>
+        <input type="file" name="img">
+        <br>
+        <button>insert</button> 
+    </form>
+</div>
+{% endblock %}

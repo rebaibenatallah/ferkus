@@ -1,0 +1,34 @@
+{% extends 'user/index.html' %}
+
+{% block content %}
+
+
+
+<h1>article mois</h1>
+<ul>
+    {% for obj in objs %}
+    <li><a href="{% url 'aeticle_mois_update_user' obj.id %}">
+        {{obj.id}}
+    </a></li>
+    {% endfor %}
+</ul>
+
+<div class="form">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <!-- <input type="text" name="title"  >
+        <br>
+        <input type="text" name="date_h">
+        <br>
+        <input type="file" name="img">
+        <br>
+        <textarea name="text" id="" name="text"></textarea>-->
+        <button>insert</button> 
+    </form>
+</div>
+
+
+
+
+{% endblock %}
